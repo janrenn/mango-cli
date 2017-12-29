@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "install": "node lib/helpers/createWinShortcut.js"
+    "install": "node lib/helpers/createWinShortcut.js",
+    "pkg": "pkg package.json --targets node8-linux-x64 --output ../mangobin/mango"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**"
+    ]
   },
   "bin": {
     "mango": "bin/mango"
